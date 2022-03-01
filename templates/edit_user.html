@@ -1,0 +1,16 @@
+{{% extends 'base.html' %}}
+
+{{% block TITLE %}}Edit User{{% endblock %}}
+
+{{% block HEADING %}}Edit User{{% endblock %}}
+
+{{% block CONTENT %}}
+<form method="POST">
+    <p>First Name<input type="text" name="first_name" placeholder="Enter a first name"></p>
+    <p>Last Name<input type="text" name="last_name" placeholder="Enter a last name"></p>
+    <p>Image URL<input type="text" name="image_url" placeholder="Provide a profile image of the user"></p>
+    <button id="cancel_user_btn"><a href="/users">Cancel</a></button>
+    <button type="submit" id="save_user_btn">Save</button>
+</form>
+  
+{{% endblock %}}
