@@ -1,10 +1,10 @@
-{{% extends 'base.html' %}}
+{% extends 'base.html' %}
 
-{{% block TITLE %}}Edit User{{% endblock %}}
+{% block TITLE %}Edit User{% endblock %}
 
-{{% block HEADING %}}Edit User{{% endblock %}}
+{% block HEADING %}Edit User{% endblock %}
 
-{{% block CONTENT %}}
+{% block CONTENT %}
 <form method="POST">
     <p>First Name<input type="text" name="first_name" placeholder="Enter a first name"></p>
     <p>Last Name<input type="text" name="last_name" placeholder="Enter a last name"></p>
@@ -13,4 +13,4 @@
     <button type="submit" id="save_user_btn">Save</button>
 </form>
   
-{{% endblock %}}
+{% endblock %}

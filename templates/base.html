@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{% block TITLE %}}Title Here{{% endblock %}}</title>
+    <title>{% block TITLE %}Title Here{% endblock %}</title>
     <link rel="stylesheet" href="{{url_for('static', filename='stylesheet.css')}}">
 </head>
 <body>
-    <h1>{{% block HEADING %}}Heading Here{{% endblock %}}</h1>
+    <h1>{% block HEADING %}Heading Here{% endblock %}</h1>
     
-    {{% block CONTENT %}}Content Here{{% endblock %}}
+    {% block CONTENT %}Content Here{% endblock %}
     
 </body>
 </html>

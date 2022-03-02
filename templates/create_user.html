@@ -1,10 +1,10 @@
-{{% extends 'base.html' %}}
+{% extends 'base.html' %}
 
-{{% block TITLE %}}Create A New User{{% endblock %}}
+{% block TITLE %}Create A New User{% endblock %}
 
-{{% block HEADING %}}Create A New User{{% endblock %}}
+{% block HEADING %}Create A New User{% endblock %}
 
-{{% block CONTENT %}}
+{% block CONTENT %}
 <form method="POST">
     <p>First Name<input type="text" id="first_name" name="first_name" placeholder="Enter a first name"></p>
     <p>Last Name<input type="text" id="last_name" name="last_name" placeholder="Enter a last name"></p>
@@ -12,4 +12,4 @@
     <button type="submit" id="create_user_btn">Add</button>
 </form>
   
-{{% endblock %}}
+{% endblock %}

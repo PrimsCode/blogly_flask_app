@@ -1,12 +1,21 @@
-{{% extends 'base.html' %}}
+{% extends 'base.html' %}
 
-{{% block TITLE %}}User Profile{{% endblock %}}
+{% block TITLE %}User Profile{% endblock %}
 
-{{% block HEADING %}}{{user.first_name}} {{user.last_name}}{% endblock %}}
+{% block HEADING %}{{user.first_name}} {{user.last_name}}{% endblock %}
 
-{{% block CONTENT %}}
+{% block CONTENT %}
 <img src="{{user.image_url}}" alt="{{user.first_name}} {{user.last_name}}">
 <button><a href="/users/{{user.id}}/edit">Edit</a></button>
 <button><a href="/users/{{user.id}}/delete">Delete</a></button>
+
+<h2>Posts</h2>
+<ul>
+    {% for post in posts %}
+    <li><a href="/users/{{user.id}}/posts/{{post.id}}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
+<button><a href="/users/{{user.id}}/posts/new">Add Post</a></button>
+
   
-{{% endblock %}}
+{% endblock %}

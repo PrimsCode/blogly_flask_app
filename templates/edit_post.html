@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block TITLE %}Edit Post{% endblock %}
+
+{% block HEADING %}Edit Post{% endblock %}
+
+{% block CONTENT %}
+
+<form method="POST">
+    <p>Title<input type="text" name="title"></p>
+    <p>Content<input type="text" name="content"></p>
+    <button id="cancel_user_btn"><a href="/users">Cancel</a></button>
+    <button type="submit" id="add_post_btn">Add</button>
+</form>
+
+{% endblock %}

@@ -1,10 +1,10 @@
-{{% extends 'base.html' %}}
+{% extends 'base.html' %}
 
-{{% block TITLE %}}Users{{% endblock %}}
+{% block TITLE %}Users{% endblock %}
 
-{{% block HEADING %}}Users{{% endblock %}}
+{% block HEADING %}Users{% endblock %}
 
-{{% block CONTENT %}}
+{% block CONTENT %}
 <ul>
     {% for user in users %}
     <li><a href="/users/{{user.id}}">{{ user.first_name }} {{user.last_name}}</a></li>
@@ -13,4 +13,4 @@
 
 <button><a href="/users/new">Create A New User</a></button>
   
-{{% endblock %}}
+{% endblock %}
