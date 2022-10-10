@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block TITLE %}Welcome To TOI{% endblock %}
+
+{% block HEADING %}Thoughts, Opinions & Ideas{% endblock %}
+
+{% block CONTENT %}
+
+
+<div class="home-container">
+    <div class="posts-container">
+        <h2>Newest Posts</h2>
+
+        <div class="post">
+            <h3>{{posts[1].title}}</h3>
+            <p class="post-teaser">{{posts[1].content}}</p>
+        </div>
+        <div class="post">
+            <h3>{{posts[2].title}}</h3>
+            <p class="post-teaser">{{posts[2].content}}</p>
+        </div>
+        <div class="post">
+            <h3>{{posts[3].title}}</h3>
+            <p class="post-teaser">{{posts[3].content}}</p>
+        </div>
+
+    </div>
+    
+    <div class="writers-container">
+        <h2>Newest Writers</h2>
+
+        <div class="post">
+            <h3>{{users[1].first_name}}</h3>
+            <p class="display-profile-pic"><img class="" style="width:250px; height:250px; object-fit: cover;" src="{{users[1].image_url}}">
+            </p>
+        </div>
+        <div class="post">
+            <h3>{{users[2].first_name}}</h3>
+            <p class="display-profile-pic"><img class="" style="width:250px; height:250px; object-fit: cover;" src="{{users[2].image_url}}">
+            </p>
+        </div>
+    
+
+    </div>
+</div>
+  
+{% endblock %}

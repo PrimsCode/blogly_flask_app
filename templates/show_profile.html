@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block TITLE %}User Profile{% endblock %}
+
+{% block HEADING %}{{user.first_name}} {{user.last_name}}{% endblock %}
+
+{% block CONTENT %}
+
+<div class="profile-container">
+    <img class="" style="width:250px; height:250px; object-fit: cover;" src="{{user.image_url}}" alt="{{user.first_name}} {{user.last_name}}">
+    <br> 
+    <button class="btn btn-primary"><a id="contained-link" href="/users/{{user.id}}/edit">Edit</a></button>
+    <button type="button" class="btn btn-secondary"><a id="contained-link" href="/users/{{user.id}}/delete">Delete</a></button>
+
+</div>
+
+<div class="container">
+    <h2>Posts</h2>
+    <button type="button" class="btn btn-primary"><a id="contained-link" href="/users/{{user.id}}/posts/new">Create Post</a></button>
+</div>
+
+<div class="display-container">
+
+    {% for post in posts %}    
+    <a id="exposed-link" href="/users/{{user.id}}/posts/{{post.id}}">
+        <div class="post">
+            <h3>{{post.title}}</h3>
+            <p class="post-teaser">{{post.content}}</p>
+        </div>
+    </a>
+    {% endfor %}    
+</div>
+
+  
+{% endblock %}

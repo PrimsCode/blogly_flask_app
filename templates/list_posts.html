@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block TITLE %}Posts{% endblock %}
+
+{% block HEADING %}Posts{% endblock %}
+
+{% block CONTENT %}
+
+<div class="display-container">
+
+    {% for post in posts %}    
+    <a id="exposed-link" href="/users/{{post.user_id}}/posts/{{post.id}}">
+    <div class="post">
+        <h3>{{post.title}}</h3>
+        <p class="post-teaser">{{post.content}}</p>
+    </div>
+    </a>
+    {% endfor %}
+    
+</div>
+
+{% endblock %}

@@ -12,19 +12,18 @@
 
 </head>
 
-<body>
-  
-    <ul class="nav-bar">
-      <li class="nav-bar-list" id="symbol">TOI</li>
-      <a id="contained-link" href="/home"><li class="nav-bar-list" id="nav-hover">Home</li></a>
-      <a id="contained-link" href="/users"><li class="nav-bar-list" id="nav-hover">Users</li></a>
-      <a id="contained-link" href="/posts"><li class="nav-bar-list" id="nav-hover">Posts</li></a>
-      <a id="contained-link" href="/tags"><li class="nav-bar-list" id="nav-hover">Tags</li></a>
-    </ul>
+<body class="welcome-page">
 
-    <h1>{% block HEADING %}{% endblock %}</h1>
-          
-    {% block CONTENT %}Content Here{% endblock %}
+    <div class="welcome-container">
+        <div class="welcome-container1">
+            <p>THOUGHTS</p>
+            <p>OPINIONS</p>
+            <p>& IDEAS</p>
+        </div>
+        <div class="welcome-container2">
+            <a id="contained-link" href="/home"><button class="btn btn-secondary" id="welcome-btn">Enter</button></a>
+        </div>
+    </div>
     
 </body>
 </html>

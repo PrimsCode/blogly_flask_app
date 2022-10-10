@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block TITLE %}Edit Tag{% endblock %}
+
+{% block HEADING %}Edit Tag: {{tag.name}}{% endblock %}
+
+{% block CONTENT %}
+
+<form method="POST">
+    <p>Name<input type="text" id="name" name="name" placeholder="Edit {{tag.name}}"></p>
+    
+    <a href="/tags"><button id="btn">Cancel</button></a>
+    <button type="submit" id="create_user_btn">Add</button>
+    <button><a id="contained-link" href="/tags/{{tag.id}}/delete">Delete</a></button>
+</form>
+  
+{% endblock %}

@@ -1,16 +1,27 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block TITLE %} Title Here {% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='stylesheet.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,800;1,800&family=Work+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 
-{% block TITLE %}Users{% endblock %}
+</head>
 
-{% block HEADING %}Users{% endblock %}
-
-{% block CONTENT %}
-<ul>
-    {% for user in users %}
-    <li><a href="/users/{{user.id}}">{{ user.first_name }} {{user.last_name}}</a></li>
-    {% endfor %}
-</ul>
-
-<button><a href="/users/new">Create A New User</a></button>
+<body>
   
-{% endblock %}
+<p>THOUGHTS</p>
+<p>OPINIONS</p>
+<p>IDEAS</p>
+
+<p>&</p>
+
+<a href="/home"><button>Enter</button></a>
+
+
+</body>
+</html>

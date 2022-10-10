@@ -20,7 +20,7 @@ class User(db.Model):
     first_name = db.Column(db.Text, nullable = False)
     last_name = db.Column(db.Text, nullable = False)
     image_url = db.Column(db.Text, nullable = False, default=DEFAULT_IMAGE_URL)
-    posts = db.relationship('Post', backref='posting')
+    posts = db.relationship('Post', backref='users')
 
 class Post(db.Model):
     __tablename__ = "posts"
@@ -30,6 +30,23 @@ class Post(db.Model):
     content = db.Column(db.Text, nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.now)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+        
+class Tag(db.Model):
+    __tablename__ = "tags"
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.Text, nullable=False, unique=True)
+    post_tags = db.relationship('Post', secondary="post_tags", backref='tags')
+
+class PostTag(db.Model):
+    __tablename__ ="post_tags"
+
+    post_id = db.Column(db.Integer, db.ForeignKey("posts.id"), primary_key=True)
+    tag_id = db.Column(db.Integer, db.ForeignKey("tags.id"), primary_key=True)
+
+
+
+
 
 
 

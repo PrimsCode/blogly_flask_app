@@ -7,10 +7,17 @@
 {% block CONTENT %}
 
 <form method="POST">
-    <p>Title<input type="text" name="title"></p>
-    <p>Content<input type="text" name="content"></p>
+    <p>Title<input type="text" name="title" placeholder="{{post.title}}"></p>
+    <p>Content<input type="text" name="content" placeholder="{{post.content}}"></p>
+
+    {% for tag in tags %}
+    <input type="checkbox" name="tags" value="{{tag.id}}">
+    <label for="{{tag.id}}">{{tag.name}}</label>
+    {% endfor %}
+
     <button id="cancel_user_btn"><a href="/users">Cancel</a></button>
     <button type="submit" id="add_post_btn">Add</button>
+    <button><a id="contained-link" href="/posts/{{post.id}}/delete">Delete</a></button>
 </form>
 
 {% endblock %}
